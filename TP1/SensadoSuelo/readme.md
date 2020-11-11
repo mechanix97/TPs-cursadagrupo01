@@ -62,5 +62,5 @@
 </ul>
 
 <h2>diagrama Yakindu</h2>
-<p><strong><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/SensadoSuelo/SensadoSuelo.png" alt=""></strong></p>
+<p><strong><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/SensadoSuelo/SensadoSuelo.PNG" alt=""></strong></p>
 
