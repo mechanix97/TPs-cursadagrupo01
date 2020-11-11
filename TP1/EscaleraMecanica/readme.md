@@ -24,7 +24,6 @@
 <li>
 <p>VERDE-FUNCIONANDO</p>
 </li>
-<li>
 </ul>
 
 <h2>Eventos:</h2>
