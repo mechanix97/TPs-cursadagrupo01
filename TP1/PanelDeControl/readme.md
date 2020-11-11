@@ -65,7 +65,6 @@
 <p> FREC: integer = 1 : Define que la magnitud es freciencia</p>
 </li>
 </ul>
-<h2 id="capturas-de-los-diagramas">Capturas de los diagramas:</h2>
-<h2 id="región-función">Región Función</h2>
+<h2 id="capturas-de-los-diagramas">Diagrama Yakindu:</h2>
 <p><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/PanelDeControl/PanelDeControl.PNG" alt=""></p>
 
