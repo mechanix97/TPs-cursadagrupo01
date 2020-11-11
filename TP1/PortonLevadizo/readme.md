@@ -1,3 +1,5 @@
+<h1 id="portón-levadizo">Portón Levadizo</h1>
+<h2 >Estados:</h2>
 <p>Los primeros 4 son los posibles estados del porton, mientras que los ultimos dos son estados de la señalización luminoza </p>
 <ul>
 <li>
