@@ -1,4 +1,3 @@
-
 #include "../../PanelDeControl/inc/sc_types.h"
 #include "../../PanelDeControl/inc/main.h"
 #include "../../PanelDeControl/inc/TimerTicks.h"
