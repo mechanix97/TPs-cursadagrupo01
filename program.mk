@@ -1,4 +1,4 @@
 
 
-PROGRAM_PATH = projects
-PROGRAM_NAME = yakindu-project
+PROGRAM_PATH = TP1
+PROGRAM_NAME = EscaleraMecanica
