@@ -1,2 +1,2 @@
-projects/yakindu-project/out/libs/cmsis_core/src/armv7m_startup.o: \
+TP1/EscaleraMecanica/out/libs/cmsis_core/src/armv7m_startup.o: \
  libs/cmsis_core/src/armv7m_startup.c

@@ -1,62 +1,14 @@
-/* Copyright 2017, Pablo Ridolfi, Juan Esteban Alarcon, Juan Manuel Cruz
- * All rights reserved.
- *
- * This file is part of Workspace.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice,
- *    this list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
- *
- * 3. Neither the name of the copyright holder nor the names of its
- *    contributors may be used to endorse or promote products derived from this
- *    software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
- * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
- * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- * POSSIBILITY OF SUCH DAMAGE.
- *
- */
 
-/** @brief This is a simple statechart example using Yakindu Statechart Tool
- * Plug-in (update site: http://updates.yakindu.org/sct/mars/releases/).
- */
-
-/** \addtogroup statechart Simple UML Statechart example.
- ** @{ */
-
-/*==================[inclusions]=============================================*/
-#include "main.h"
-#include "EscaleraMecanica.h"
-#include "sapi.h"       // <= sAPI header
-
-/* Include statechart header file. Be sure you run the statechart C code
- * generation tool!
- */
-
-#include "TimerTicks.h"
+#include "../inc/sc_types.h"
+#include "../inc/main.h"
+#include "../inc/TimerTicks.h"
+#include "../gen/EscaleraMecanica.h"
+#include "board.h"
 
 
-/*==================[macros and definitions]=================================*/
+#define TICKRATE_1MS		   (1000)				/* 1000 ticks per second */
+#define TICKRATE_MS			(TICKRATE_1MS)	/* 1000 ticks per second */
 
-#define TICKRATE_1MS	(1)				/* 1000 ticks per second */
-#define TICKRATE_MS		(TICKRATE_1MS)	/* 1000 ticks per second */
-
-
-/*==================[internal data declaration]==============================*/
 
 volatile bool SysTick_Time_Flag = false;
 
@@ -64,33 +16,23 @@ volatile bool SysTick_Time_Flag = false;
 static EscaleraMecanica statechart;
 
 /*! This is a timed state machine that requires timer services */
-#define NOF_TIMERS (sizeof(EscaleraMecanicaTimeEvents)/sizeof(sc_boolean))
+//#define NOF_TIMERS (sizeof(EscaleraMecanicaTimeEvents)/sizeof(sc_boolean))
 
-TimerTicks ticks[NOF_TIMERS];
+//TimerTicks ticks[NOF_TIMERS];
 
-
-/*==================[internal functions declaration]=========================*/
-
-/*==================[internal data definition]===============================*/
-
-/*==================[external data definition]===============================*/
-
-/*==================[internal functions definition]==========================*/
-
-/*==================[external functions definition]==========================*/
 
 /*! \file This header defines prototypes for all functions that are required
  *  by the state machine implementation.
  *
  *  This is a state machine uses time events which require access to a timing
  *  service. Thus the function prototypes:
- *  - application_setTimer and
- *  - application_unsetTimer
+ *  - escaleraMecanica_setTimer and
+ *  - escaleraMecanica_unsetTimer
  *  are defined.
  *
  *  This state machine makes use of operations declared in the state machines
  *  interface or internal scopes. Thus the function prototypes:
- *  - applicationIface_opLED
+ *  - escaleraMecanicaIface_opLED
  *  are defined.
  *
  *  These functions will be called during a 'run to completion step' (runCycle)
@@ -101,6 +43,13 @@ TimerTicks ticks[NOF_TIMERS];
  *  - make sure that the execution time is as short as possible.
  */
 
+#define LED0_R    0
+#define LED0_G    1
+#define LED0_B    2
+#define LED1      3
+#define LED2      4
+#define LED3      5
+
 
 /** state machine user-defined external function (action)
  *
@@ -108,10 +57,9 @@ TimerTicks ticks[NOF_TIMERS];
  * @param LEDNumber number of LED
  * @param onoff state machine operation parameter
  */
-
-void EscaleraMecanicaIface_opLED( EscaleraMecanica* handle, sc_integer LEDNumber, sc_boolean State )
+void escaleraMecanicaIface_opMotor( EscaleraMecanica* handle, sc_integer LEDNumber, sc_boolean State )
 {
-	gpioWrite( (LEDR + LEDNumber), State );
+	Board_LED_Set(LEDNumber, State);
 }
 
 
@@ -128,9 +76,9 @@ void EscaleraMecanicaIface_opLED( EscaleraMecanica* handle, sc_integer LEDNumber
  *  \periodic Indicates the the time event must be raised periodically until
  *   the timer is unset
  */
-void EscaleraMecanica_setTimer( EscaleraMecanica* handle, const sc_eventid evid, const sc_integer time_ms, const sc_boolean periodic )
+void escaleraMecanica_setTimer( EscaleraMecanica* handle, const sc_eventid evid, const sc_integer time_ms, const sc_boolean periodic )
 {
-	SetNewTimerTick(ticks, NOF_TIMERS, evid, time_ms, periodic);
+	//SetNewTimerTick(ticks, NOF_TIMERS, evid, time_ms, periodic);
 }
 
 /*! This function has to unset timers for the time events that are required
@@ -140,9 +88,9 @@ void EscaleraMecanica_setTimer( EscaleraMecanica* handle, const sc_eventid evid,
  *  state when a state will be left.
  *  \param evid An unique identifier of the event.
  */
-void EscaleraMecanica_unsetTimer( EscaleraMecanica* handle, const sc_eventid evid )
+void escaleraMecanica_unsetTimer( EscaleraMecanica* handle, const sc_eventid evid )
 {
-	UnsetTimerTick( ticks, NOF_TIMERS, evid );
+	//UnsetTimerTick( ticks, NOF_TIMERS, evid );
 }
 
 
@@ -150,12 +98,9 @@ void EscaleraMecanica_unsetTimer( EscaleraMecanica* handle, const sc_eventid evi
  * @brief	Hook on Handle interrupt from SysTick timer
  * @return	Nothing
  */
-void myTickHook( void *ptr ){
-
-	/* The sysTick Interrupt Handler only set a Flag */
+void SysTick_Handler(void){
 	SysTick_Time_Flag = true;
 }
-
 
 /*! This function scan all EDU-CIAA-NXP buttons (TEC1, TEC2, TEC3 and TEC4),
  *  and return ID of pressed button (TEC1 or TEC2 or TEC3 or TEC4)
@@ -166,16 +111,15 @@ uint32_t Buttons_GetStatus_(void) {
 	uint32_t idx;
 
 	for (idx = 0; idx < 4; ++idx) {
-		if (gpioRead( TEC1 + idx ) == 0)
+		if (Board_TEC_GetStatus( idx ) == 0)
 			ret |= 1 << idx;
 	}
 	return ret;
 }
 
 
-
 /**
- * @brief	main routine for statechart example: EDU-CIAA-NXP - Application
+ * @brief	main routine for statechart example: EDU-CIAA-NXP - EscaleraMecanica LED3
  * @return	Function should not exit.
  */
 int main(void)
@@ -185,20 +129,17 @@ int main(void)
 	uint32_t BUTTON_Status;
 
 	/* Generic Initialization */
-	boardConfig();
+	Board_Init();
 
 	/* Init Ticks counter => TICKRATE_MS */
-	tickConfig( TICKRATE_MS );
-
-	/* Add Tick Hook */
-	tickCallbackSet( myTickHook, (void*)NULL );
+	SysTick_Config(SystemCoreClock / TICKRATE_MS);
 
 	/* Init Timer Ticks */
-	InitTimerTicks( ticks, NOF_TIMERS );
+	//InitTimerTicks( ticks, NOF_TIMERS );
 
 	/* Statechart Initialization */
-	EscaleraMecanica_init( &statechart );
-	EscaleraMecanica_enter( &statechart );
+	escaleraMecanica_init( &statechart );
+	escaleraMecanica_enter( &statechart );
 
 	/* LED state is toggled in the main program */
 	while (1) {
@@ -207,44 +148,34 @@ int main(void)
 
 		/* When a interrupt wakes to the uC, the main program validates it,
 		 * checking the waited Flag */
-		if (SysTick_Time_Flag == true) {
 
-			/* Then reset its Flag */
-			SysTick_Time_Flag = false;
-
-			/* Then Update all Timer Ticks */
-			UpdateTimers( ticks, NOF_TIMERS );
-
-			/* Then Scan all Timer Ticks */
-			for (i = 0; i < NOF_TIMERS; i++) {
-
-				/* Then if there are pending events */
-				if (IsPendEvent( ticks, NOF_TIMERS, ticks[i].evid ) == true) {
-
-					/* Then Raise an Event -> Ticks.evid => OK */
-					EscaleraMecanica_raiseTimeEvent( &statechart, ticks[i].evid );
-
-					/* Then Mark as Attached -> Ticks.evid => OK */
-					MarkAsAttEvent( ticks, NOF_TIMERS, ticks[i].evid );
-				}
-			}
 
 			/* Then Get status of buttons */
 			BUTTON_Status = Buttons_GetStatus_();
 
 			/* Then if there are a pressed button */
-			if (BUTTON_Status != 0)
+			if (BUTTON_Status != 0){
+				if(BUTTON_Status & 1){
+					escaleraMecanicaIface_raise_evPresionS1(&statechart);
+				} else if( BUTTON_Status & 2){
+					escaleraMecanicaIface_raise_evPresionS2(&statechart);
+				}else if( BUTTON_Status & 3){
 
-				/* Then Raise an Event -> evTECXOprimodo => OK,
-				 * and Value of pressed button -> viTecla */
-				EscaleraMecanicaIface_raise_evTECXOprimido(&statechart, BUTTON_Status);
-			else
-				/* Then else Raise an Event -> evTECXNoOprimido => OK */
-				EscaleraMecanicaIface_raise_evTECXNoOprimido(&statechart);
+				}else if( BUTTON_Status & 4){
+
+				}else{
+
+				}
+
+			}
+			else{
+
+			}
+
 
 			/* Then Run an Cycle of Statechart */
-			EscaleraMecanica_runCycle(&statechart);		// Run Cycle of Statechart
-		}
+			escaleraMecanica_runCycle(&statechart);		// Run Cycle of Statechart
+
 	}
 }
 

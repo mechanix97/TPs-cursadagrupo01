@@ -1,7 +1,8 @@
-TP1/PanelDeControl/out/TP1/PanelDeControl/src/main.o: \
- TP1/PanelDeControl/src/main.c \
- TP1/PanelDeControl/src/../../PanelDeControl/inc/sc_types.h \
- TP1/PanelDeControl/src/../../PanelDeControl/inc/main.h \
+TP1/EscaleraMecanica/out/TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.o: \
+ TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.c \
+ TP1/EscaleraMecanica/gen/EscaleraMecanicaRequired.h \
+ TP1/EscaleraMecanica/gen/../inc/sc_types.h \
+ TP1/EscaleraMecanica/gen/EscaleraMecanica.h \
  libs/board/edu_ciaa_nxp/inc/board.h libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \
  libs/board/lpc_chip_43xx/inc/cmsis.h \
@@ -62,7 +63,4 @@ TP1/PanelDeControl/out/TP1/PanelDeControl/src/main.o: \
  libs/board/lpc_chip_43xx/inc/error.h \
  libs/board/lpc_chip_43xx/inc/i2cm_18xx_43xx.h \
  libs/board/edu_ciaa_nxp/inc/board_api.h \
- libs/board/lpc_chip_43xx/inc/lpc_types.h \
- TP1/PanelDeControl/src/../../PanelDeControl/inc/TimerTicks.h \
- TP1/PanelDeControl/src/../../PanelDeControl/gen/Model.h \
- TP1/PanelDeControl/src/../../PanelDeControl/gen/../inc/sc_types.h
+ libs/board/lpc_chip_43xx/inc/lpc_types.h
