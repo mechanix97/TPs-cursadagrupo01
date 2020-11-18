@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart HornoMicroondas {
+
+		feature Outlet {
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "TP1/HornoMicroondas/gen"
+			libraryTargetFolder = "TP1/HornoMicroondas/inc"
+		}
+	}
+}

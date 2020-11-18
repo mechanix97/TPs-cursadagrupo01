@@ -1,4 +1,4 @@
-projects/yakindu-project/out/libs/board/edu_ciaa_nxp/src/board_sysinit.o: \
+TP1/PanelDeControl/out/libs/board/edu_ciaa_nxp/src/board_sysinit.o: \
  libs/board/edu_ciaa_nxp/src/board_sysinit.c \
  libs/board/edu_ciaa_nxp/inc/board.h libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \

@@ -1,4 +1,4 @@
-projects/yakindu-project/out/libs/board/lpc_chip_43xx/src/adc_18xx_43xx.o: \
+TP1/PanelDeControl/out/libs/board/lpc_chip_43xx/src/adc_18xx_43xx.o: \
  libs/board/lpc_chip_43xx/src/adc_18xx_43xx.c \
  libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \
