@@ -1,9 +1,7 @@
-TP1/EscaleraMecanica/out/TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.o: \
- TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.c \
- TP1/EscaleraMecanica/gen/EscaleraMecanicaRequired.h \
- TP1/EscaleraMecanica/gen/../inc/sc_types.h \
- TP1/EscaleraMecanica/gen/EscaleraMecanica.h \
- libs/board/edu_ciaa_nxp/inc/board.h libs/board/lpc_chip_43xx/inc/chip.h \
+TP1/OrdenadorMoto/out/TP1/OrdenadorMoto/src/main.o: \
+ TP1/OrdenadorMoto/src/main.c TP1/OrdenadorMoto/src/../inc/sc_types.h \
+ TP1/OrdenadorMoto/src/../inc/main.h libs/board/edu_ciaa_nxp/inc/board.h \
+ libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \
  libs/board/lpc_chip_43xx/inc/cmsis.h \
  libs/board/lpc_chip_43xx/inc/lpc_types.h \
@@ -63,4 +61,7 @@ TP1/EscaleraMecanica/out/TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.o: \
  libs/board/lpc_chip_43xx/inc/error.h \
  libs/board/lpc_chip_43xx/inc/i2cm_18xx_43xx.h \
  libs/board/edu_ciaa_nxp/inc/board_api.h \
- libs/board/lpc_chip_43xx/inc/lpc_types.h
+ libs/board/lpc_chip_43xx/inc/lpc_types.h \
+ TP1/OrdenadorMoto/src/../inc/TimerTicks.h \
+ TP1/OrdenadorMoto/src/../gen/OrdenadorMoto.h \
+ TP1/OrdenadorMoto/src/../gen/../inc/sc_types.h

@@ -16,9 +16,9 @@ volatile bool SysTick_Time_Flag = false;
 static OrdenadorMoto statechart;
 
 /*! This is a timed state machine that requires timer services */
-//#define NOF_TIMERS (sizeof(OrdenadorMotoTimeEvents)/sizeof(sc_boolean))
+#define NOF_TIMERS (sizeof(OrdenadorMotoTimeEvents)/sizeof(sc_boolean))
 
-//TimerTicks ticks[NOF_TIMERS];
+TimerTicks ticks[NOF_TIMERS];
 
 
 /*! \file This header defines prototypes for all functions that are required
@@ -78,7 +78,7 @@ void ordenadorMotoIface_opMotor( OrdenadorMoto* handle, sc_integer LEDNumber, sc
  */
 void ordenadorMoto_setTimer( OrdenadorMoto* handle, const sc_eventid evid, const sc_integer time_ms, const sc_boolean periodic )
 {
-	//SetNewTimerTick(ticks, NOF_TIMERS, evid, time_ms, periodic);
+	SetNewTimerTick(ticks, NOF_TIMERS, evid, time_ms, periodic);
 }
 
 /*! This function has to unset timers for the time events that are required
@@ -90,7 +90,7 @@ void ordenadorMoto_setTimer( OrdenadorMoto* handle, const sc_eventid evid, const
  */
 void ordenadorMoto_unsetTimer( OrdenadorMoto* handle, const sc_eventid evid )
 {
-	//UnsetTimerTick( ticks, NOF_TIMERS, evid );
+	UnsetTimerTick( ticks, NOF_TIMERS, evid );
 }
 
 
@@ -118,6 +118,11 @@ uint32_t Buttons_GetStatus_(void) {
 }
 
 
+void ordenadorMotoIface_opBoton(const OrdenadorMoto* handle){
+
+}
+
+
 /**
  * @brief	main routine for statechart example: EDU-CIAA-NXP - OrdenadorMoto LED3
  * @return	Function should not exit.
@@ -135,7 +140,7 @@ int main(void)
 	SysTick_Config(SystemCoreClock / TICKRATE_MS);
 
 	/* Init Timer Ticks */
-	//InitTimerTicks( ticks, NOF_TIMERS );
+	InitTimerTicks( ticks, NOF_TIMERS );
 
 	/* Statechart Initialization */
 	ordenadorMoto_init( &statechart );
@@ -148,6 +153,27 @@ int main(void)
 
 		/* When a interrupt wakes to the uC, the main program validates it,
 		 * checking the waited Flag */
+		if (SysTick_Time_Flag == true) {
+
+			/* Then reset its Flag */
+			SysTick_Time_Flag = false;
+
+			/* Then Update all Timer Ticks */
+			UpdateTimers( ticks, NOF_TIMERS );
+
+			/* Then Scan all Timer Ticks */
+			for (i = 0; i < NOF_TIMERS; i++) {
+
+				/* Then if there are pending events */
+				if (IsPendEvent( ticks, NOF_TIMERS, ticks[i].evid ) == true) {
+
+					/* Then Raise an Event -> Ticks.evid => OK */
+					ordenadorMoto_raiseTimeEvent( &statechart, ticks[i].evid );
+
+					/* Then Mark as Attached -> Ticks.evid => OK */
+					MarkAsAttEvent( ticks, NOF_TIMERS, ticks[i].evid );
+				}
+			}
 
 
 			/* Then Get status of buttons */
@@ -156,26 +182,25 @@ int main(void)
 			/* Then if there are a pressed button */
 			if (BUTTON_Status != 0){
 				if(BUTTON_Status & 1){
-					ordenadorMotoIface_raise_evPresionS1(&statechart);
+					ordenadorMotoIface_raise_evCambiarPantalla(&statechart);
 				} else if( BUTTON_Status & 2){
-					ordenadorMotoIface_raise_evPresionS2(&statechart);
+					//ordenadorMotoIface_raise_evNoBoton(&statechart);
 				}else if( BUTTON_Status & 3){
 
 				}else if( BUTTON_Status & 4){
 
 				}else{
-
 				}
 
 			}
 			else{
-
+				ordenadorMotoIface_raise_evNoBoton(&statechart);
 			}
 
 
 			/* Then Run an Cycle of Statechart */
 			ordenadorMoto_runCycle(&statechart);		// Run Cycle of Statechart
-
+		}
 	}
 }
 

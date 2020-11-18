@@ -1,4 +1,4 @@
-TP1/EscaleraMecanica/out/libs/board/lpc_startup/src/sysinit.o: \
+TP1/OrdenadorMoto/out/libs/board/lpc_startup/src/sysinit.o: \
  libs/board/lpc_startup/src/sysinit.c libs/board/edu_ciaa_nxp/inc/board.h \
  libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \
