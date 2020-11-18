@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart PortonLevadizo {
+
+		feature Outlet {
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "projects/PortonLevadizo/gen"
+			libraryTargetFolder = "projects/PortonLevadizo/inc"
+		}
+	}
+}
