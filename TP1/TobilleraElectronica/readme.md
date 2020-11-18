@@ -1,4 +1,4 @@
-<h1 >Sensado del Suelo</h1>
+<h1 >Tobillera Electrónica</h1>
 <h2>Estados: </h2>
 <p> El nodo al conectarse entra al estado de sensado donde realiza la medicion correspondiente, y luego de un segundo pasa al estado para enviar los datos al servidor. En este punto, se chequea si existe conexion a internet, y si es asi, pasa al estado SERVER donde se guardan y muestran los datos. Luego de 1 segundo vuelve al estado anterior, del cual pasará al estado SLEEP ( si se cumple que se envio la informacion). El equipo permanecera en este estado con un clock activado que, luego de cierto tiempo (configurable) volverá al estado de medicion. </p>
 
