@@ -1,2 +1,2 @@
-TP1/EscaleraMecanica/out/libs/board/lpc_startup/src/crp.o: \
+projects/yakindu-project/out/libs/board/lpc_startup/src/crp.o: \
  libs/board/lpc_startup/src/crp.c

@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart OrdenadorMoto {
+
+		feature Outlet {
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "TP1/OrdenadorMoto/gen"
+			libraryTargetFolder = "TP1/OrdenadorMoto/inc"
+		}
+	}
+}
