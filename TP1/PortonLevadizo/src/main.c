@@ -1,36 +1,96 @@
+/* Copyright 2017, Pablo Ridolfi, Juan Esteban Alarcon, Juan Manuel Cruz
+ * All rights reserved.
+ *
+ * This file is part of Workspace.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ *    contributors may be used to endorse or promote products derived from this
+ *    software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
 
-#include "../../PanelDeControl/inc/sc_types.h"
-#include "../../PanelDeControl/inc/main.h"
-#include "../../PanelDeControl/inc/TimerTicks.h"
-#include "../../PanelDeControl/gen/Model.h"
+/** @brief This is a simple statechart example using Yakindu Statechart Tool
+ * Plug-in (update site: http://updates.yakindu.org/sct/mars/releases/).
+ */
 
-#define TICKRATE_1MS		   (1000)				/* 1000 ticks per second */
-#define TICKRATE_MS			(TICKRATE_1MS)	/* 1000 ticks per second */
+/** \addtogroup statechart Simple UML Statechart example.
+ ** @{ */
 
+/*==================[inclusions]=============================================*/
+#include "main.h"
+#include "PortonLevadizo.h"
+#include "sapi.h"       // <= sAPI header
+
+/* Include statechart header file. Be sure you run the statechart C code
+ * generation tool!
+ */
+
+#include "TimerTicks.h"
+
+
+/*==================[macros and definitions]=================================*/
+
+#define TICKRATE_1MS	(1)				/* 1000 ticks per second */
+#define TICKRATE_MS		(TICKRATE_1MS)	/* 1000 ticks per second */
+
+
+/*==================[internal data declaration]==============================*/
 
 volatile bool SysTick_Time_Flag = false;
 
 /*! This is a state machine */
-static Model statechart;
+static PortonLevadizo statechart;
 
 /*! This is a timed state machine that requires timer services */
-#define NOF_TIMERS (sizeof(ModelTimeEvents)/sizeof(sc_boolean))
+#define NOF_TIMERS (sizeof(PortonLevadizoTimeEvents)/sizeof(sc_boolean))
 
 TimerTicks ticks[NOF_TIMERS];
 
+
+/*==================[internal functions declaration]=========================*/
+
+/*==================[internal data definition]===============================*/
+
+/*==================[external data definition]===============================*/
+
+/*==================[internal functions definition]==========================*/
+
+/*==================[external functions definition]==========================*/
 
 /*! \file This header defines prototypes for all functions that are required
  *  by the state machine implementation.
  *
  *  This is a state machine uses time events which require access to a timing
  *  service. Thus the function prototypes:
- *  - model_setTimer and
- *  - model_unsetTimer
+ *  - application_setTimer and
+ *  - application_unsetTimer
  *  are defined.
  *
  *  This state machine makes use of operations declared in the state machines
  *  interface or internal scopes. Thus the function prototypes:
- *  - modelIface_opLED
+ *  - applicationIface_opLED
  *  are defined.
  *
  *  These functions will be called during a 'run to completion step' (runCycle)
@@ -41,13 +101,6 @@ TimerTicks ticks[NOF_TIMERS];
  *  - make sure that the execution time is as short as possible.
  */
 
-#define LED0_R    0
-#define LED0_G    1
-#define LED0_B    2
-#define LED1      3
-#define LED2      4
-#define LED3      5
-
 
 /** state machine user-defined external function (action)
  *
@@ -55,9 +108,10 @@ TimerTicks ticks[NOF_TIMERS];
  * @param LEDNumber number of LED
  * @param onoff state machine operation parameter
  */
-void modelIface_opMotor( Model* handle, sc_integer LEDNumber, sc_boolean State )
+
+void portonLevadizoIface_opLED( PortonLevadizo* handle, sc_integer LEDNumber, sc_boolean State )
 {
-	Board_LED_Set(LEDNumber, State);
+	gpioWrite( (LEDR + LEDNumber), State );
 }
 
 
@@ -74,7 +128,7 @@ void modelIface_opMotor( Model* handle, sc_integer LEDNumber, sc_boolean State )
  *  \periodic Indicates the the time event must be raised periodically until
  *   the timer is unset
  */
-void model_setTimer( Model* handle, const sc_eventid evid, const sc_integer time_ms, const sc_boolean periodic )
+void portonLevadizo_setTimer( PortonLevadizo* handle, const sc_eventid evid, const sc_integer time_ms, const sc_boolean periodic )
 {
 	SetNewTimerTick(ticks, NOF_TIMERS, evid, time_ms, periodic);
 }
@@ -86,7 +140,7 @@ void model_setTimer( Model* handle, const sc_eventid evid, const sc_integer time
  *  state when a state will be left.
  *  \param evid An unique identifier of the event.
  */
-void model_unsetTimer( Model* handle, const sc_eventid evid )
+void portonLevadizo_unsetTimer( PortonLevadizo* handle, const sc_eventid evid )
 {
 	UnsetTimerTick( ticks, NOF_TIMERS, evid );
 }
@@ -96,31 +150,61 @@ void model_unsetTimer( Model* handle, const sc_eventid evid )
  * @brief	Hook on Handle interrupt from SysTick timer
  * @return	Nothing
  */
-void SysTick_Handler(void){
+void myTickHook( void *ptr ){
+
+	/* The sysTick Interrupt Handler only set a Flag */
 	SysTick_Time_Flag = true;
 }
 
 
+/*! This function scan all EDU-CIAA-NXP buttons (TEC1, TEC2, TEC3 and TEC4),
+ *  and return ID of pressed button (TEC1 or TEC2 or TEC3 or TEC4)
+ *  or false if no button was pressed.
+ */
+uint32_t Buttons_GetStatus_(void) {
+	uint8_t ret = false;
+	uint32_t idx;
+
+	for (idx = 0; idx < 4; ++idx) {
+		if (gpioRead( TEC1 + idx ) == 0)
+			ret |= 1 << idx;
+	}
+	return ret;
+}
+
+void portonLevadizoIface_opMotor(PortonLevadizo* handle, sc_boolean Action, sc_boolean State)
+{
+	return;
+}
+
+
+
+
 /**
- * @brief	main routine for statechart example: EDU-CIAA-NXP - Model LED3
+ * @brief	main routine for statechart example: EDU-CIAA-NXP - Application
  * @return	Function should not exit.
  */
 int main(void)
 {
 	uint32_t i;
 
+	uint32_t BUTTON_Status;
+
 	/* Generic Initialization */
-	Board_Init();
+	boardConfig();
 
 	/* Init Ticks counter => TICKRATE_MS */
-	SysTick_Config(SystemCoreClock / TICKRATE_MS);
+	tickConfig( TICKRATE_MS );
+
+	/* Add Tick Hook */
+	tickCallbackSet( myTickHook, (void*)NULL );
 
 	/* Init Timer Ticks */
 	InitTimerTicks( ticks, NOF_TIMERS );
 
 	/* Statechart Initialization */
-	model_init( &statechart );
-	model_enter( &statechart );
+	portonLevadizo_init( &statechart );
+	portonLevadizo_enter( &statechart );
 
 	/* LED state is toggled in the main program */
 	while (1) {
@@ -144,15 +228,28 @@ int main(void)
 				if (IsPendEvent( ticks, NOF_TIMERS, ticks[i].evid ) == true) {
 
 					/* Then Raise an Event -> Ticks.evid => OK */
-					model_raiseTimeEvent( &statechart, ticks[i].evid );
+					portonLevadizo_raiseTimeEvent( &statechart, ticks[i].evid );
 
 					/* Then Mark as Attached -> Ticks.evid => OK */
 					MarkAsAttEvent( ticks, NOF_TIMERS, ticks[i].evid );
 				}
 			}
 
+			/* Then Get status of buttons */
+			BUTTON_Status = Buttons_GetStatus_();
+
+			/* Then if there are a pressed button */
+			if (BUTTON_Status != 0)
+
+				/* Then Raise an Event -> evTECXOprimodo => OK,
+				 * and Value of pressed button -> viTecla */
+				portonLevadizoIface_raise_evTECXOprimido(&statechart, BUTTON_Status);
+			else
+				/* Then else Raise an Event -> evTECXNoOprimido => OK */
+				portonLevadizoIface_raise_evTECXNoOprimido(&statechart);
+
 			/* Then Run an Cycle of Statechart */
-			model_runCycle(&statechart);		// Run Cycle of Statechart
+			portonLevadizo_runCycle(&statechart);		// Run Cycle of Statechart
 		}
 	}
 }
