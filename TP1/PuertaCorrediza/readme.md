@@ -77,3 +77,6 @@
 </ul>
 <h2>Diagrama Yakindu:</h2>
 <p><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/PuertaCorrediza/PuertaCorrediza.PNG" alt=""></p>
+
+<h1> Version con Botones </h1>
+<p>El estado inicial es CERRADO, esto se indica mediante una luz Roja prendida (LED RGB) al precionar la tecla TEC 1 simulamos una presencia frente a la purta lo que hara que la puerta se empieze a abrir , el LED3 empezara a titilar indicando esto.  Con la tecla TEC3 indicamos que la puerta ya abrio, por lo que deja de titilar el led y se prende el LED RGB en color verde. Si en este intante se apreta el boton TEC2, indicando que no hay una presencia frente al porton, el porton comienza a cerrarse. Finalmente con la tecla TEC4 indicamos que el porton ya esta cerrrado y se encientde el LEDRGB en rojo. Cabe destacar que en el paso intermedio, es decir, mientras esa abriendo o mientras esta cerrando puede cambiar de accion en funcion si detecta o no una presencia frente a el </p>
