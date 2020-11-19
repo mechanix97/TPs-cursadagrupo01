@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart SensadoSuelo {
+
+		feature Outlet {
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "TP1/SensadoSuelo/gen"
+			libraryTargetFolder = "TP1/SensadoSuelo/inc"
+		}
+	}
+}

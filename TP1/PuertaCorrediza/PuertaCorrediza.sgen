@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart PuertaCorrediza {
+
+		feature Outlet {
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "projects/PuertaCorrediza/gen"
+			libraryTargetFolder = "projects/PuertaCorrediza/inc"
+		}
+	}
+}

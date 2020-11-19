@@ -1,0 +1,271 @@
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000300 0000001c t clearInEvents
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00031c 0000000a t enact_TECX_OPRIMIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000326 0000000a t enseq_TECX_NO_OPRIMIDO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000330 00000012 t enseq_TECX_OPRIMIDO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000342 0000000a t enseq_TECX_VALIDACION_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00034c 0000000a t enseq_main_region_ESPERA_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000356 00000008 t exseq_TECX_NO_OPRIMIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00035e 00000008 t exseq_TECX_OPRIMIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000366 00000008 t exseq_TECX_VALIDACION
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00036e 0000000a t exseq_main_region_ESPERA
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000378 0000000a t exseq_PUERTAcORREDIZA_CERRADO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000382 0000000a t exseq_PUERTAcORREDIZA_CERRANDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00038c 0000000a t exseq_PUERTAcORREDIZA_ABRIENDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000396 0000000a t exseq_PUERTAcORREDIZA_ABIERTO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003a0 0000000a t exseq_LED3_REPOSO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003aa 00000008 t react_TECX__entry_Default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003b2 00000008 t enseq_TECX_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003ba 00000008 t react_main_region__entry_Default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003c2 00000008 t enseq_main_region_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003ca 00000004 t react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003ce 00000026 t TECX_OPRIMIDO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0003f4 00000038 t TECX_VALIDACION_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00042c 0000007a t main_region_ESPERA_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0004a6 0000000c t enact_PUERTAcORREDIZA_ABRIENDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0004b2 00000012 t enseq_PUERTAcORREDIZA_ABRIENDO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0004c4 00000022 t PUERTAcORREDIZA_CERRADO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0004e6 0000000c t enact_PUERTAcORREDIZA_CERRANDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0004f2 00000012 t enseq_PUERTAcORREDIZA_CERRANDO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000504 00000022 t PUERTAcORREDIZA_ABIERTO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000526 00000022 t enact_PUERTAcORREDIZA_CERRADO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000548 00000012 t enseq_PUERTAcORREDIZA_CERRADO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00055a 00000008 t react_PUERTAcORREDIZA__entry_Default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000562 00000008 t enseq_PUERTAcORREDIZA_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00056a 00000036 t PUERTAcORREDIZA_CERRANDO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005a0 0000000c t enact_LED3_REPOSO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005ac 00000012 t enseq_LED3_REPOSO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005be 00000008 t react_LED3__entry_Default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005c6 00000008 t enseq_LED3_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005ce 00000022 t enact_PUERTAcORREDIZA_ABIERTO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0005f0 00000012 t enseq_PUERTAcORREDIZA_ABIERTO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000602 00000032 t PUERTAcORREDIZA_ABRIENDO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000634 0000000c t exact_TECX_DEBOUNCE
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000640 0000000e t exseq_TECX_DEBOUNCE
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00064e 00000026 t TECX_DEBOUNCE_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000674 0000000c t exact_LED3_TITILA_r1_APAGADO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000680 00000010 t exseq_LED3_TITILA_r1_APAGADO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000690 0000000c t exact_LED3_TITILA_r1_ENCENDIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00069c 00000010 t exseq_LED3_TITILA_r1_ENCENDIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0006ac 0000001a t exseq_LED3_TITILA_r1
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0006c6 00000008 t exseq_LED3_TITILA
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0006ce 0000001e t LED3_TITILA_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0006ec 00000010 t enact_TECX_DEBOUNCE
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0006fc 00000012 t enseq_TECX_DEBOUNCE_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00070e 00000026 t TECX_NO_OPRIMIDO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000734 0000001c t enact_LED3_TITILA_r1_APAGADO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000750 00000012 t enseq_LED3_TITILA_r1_APAGADO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000762 0000002a t LED3_TITILA_r1_ENCENDIDO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00078c 00000008 t react_LED3_TITILA_r1__entry_Default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000794 00000008 t enseq_LED3_TITILA_r1_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00079c 00000008 t enseq_LED3_TITILA_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0007a4 0000001e t LED3_REPOSO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0007c2 0000001e t enact_LED3_TITILA_r1_ENCENDIDO
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0007e0 00000012 t enseq_LED3_TITILA_r1_ENCENDIDO_default
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0007f2 0000002a t LED3_TITILA_r1_APAGADO_react
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a002048 00000004 t InitClkStates
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00204c 00000074 t pinmuxing
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000a00 00000044 t Board_LED_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000a44 00000040 t Board_TEC_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000a84 00000040 t Board_GPIO_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000ac4 00000030 t Board_ADC_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000af4 00000038 t Board_SPI_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000b2c 00000024 t Board_I2C_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020c4 00000008 t GpioButtons
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020cc 0000000c t GpioLeds
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020d8 00000012 t GpioPorts
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000bbc 000000a0 t pll_calc_divs
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000c5c 0000010c t pll_get_frac
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000d68 00000048 t Chip_Clock_FindBaseClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000fd4 00000022 t Chip_Clock_GetDivRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000048 00000008 b audio_usb_pll_freq
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020f8 0000006c t periph_to_base
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001140 00000014 t Chip_SSP_GetClockIndex
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001154 00000018 t Chip_SSP_GetPeriphClockIndex
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0011f4 0000002c t Chip_UART_GetIndex
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a002164 00000008 t UART_BClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00216c 00000008 t UART_PClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000000 00000038 d i2c
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0013d4 00000014 t Chip_ADC_GetClockIndex
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0013e8 00000032 t getClkDiv
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a002174 00000048 t InitClkStates
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000038 00000004 d ClockSpeed
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0016d8 00000034 t gpioObtainPinInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000050 00000004 b callBackFuncParams
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000058 00000008 b tickCounter
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000060 00000004 b tickHookFunction
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000064 00000004 b g_hUsb
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1000006c 00000020 b statechart
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022a4 ? __init_array_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022a4 ? __preinit_array_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022a4 ? __init_array_start
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022a4 ? __preinit_array_start
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000dfc 0000001c T Chip_Clock_GetDividerSource
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000068 00000001 B SysTick_Time_Flag
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W TIMER2_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000186 00000002 W DebugMon_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W RIT_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a080000 A __top_MFlashA512
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W ADCHS_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000114 T __section_table_start
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W FLASH_EEPROM_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W I2C0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00017c 00000002 W HardFault_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000000 A __vectors_start__
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00148e 0000000c T Chip_ADC_SetResolution
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001a00 0000002c T SysTick_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001ad8 0000001c T puertaCorrediza_setTimer
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00162c 00000002 W initialise_monitor_handles
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SDIO_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W ATIMER_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000188 00000002 W PendSV_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00017a 00000002 W NMI_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022ac R __exidx_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000150 T __data_section_table_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W I2C1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W UART1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO5_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W CAN1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:53ff6254 A __valid_user_code_checksum
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022ac R _etext
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W USB1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W I2S0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00083c 0000001c T puertaCorrediza_enter
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001cb4 00000044 T UpdateTimers
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W TIMER3_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001078 0000000c T Chip_Clock_GetBaseClocktHz
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W UART0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0001aa 00000012 T bss_init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001c66 00000028 T IsPendEvent
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SGPIO_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001c8e 00000026 T MarkAsAttEvent
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00081c 00000020 T puertaCorrediza_init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001cf8 T __aeabi_uldivmod
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:100000c4 ? _noinit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1000008c 00000004 B SystemCoreClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001220 00000054 T Chip_UART_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W ADC0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000182 00000002 W UsageFault_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001abc 0000000c T myTickHook
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0010f4 0000004c T Chip_Clock_GetRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO6_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000988 0000006c T Board_SetupClocking
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:20008000 A __top_RamAHB32
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001d28 000002c2 T __udivmoddi4
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020c0 00000004 T ExtRateIn
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W IntDefaultHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000300 T __CRP_WORD_END__
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SSP0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000948 00000008 T puertaCorredizaIface_raise_evTECXOprimido
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0022a4 R __exidx_start
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0002fc 00000004 T CRP_WORD
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001ff0 00000048 T __libc_init_array
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W ADC1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000b74 00000030 T Board_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0016ba 00000002 W _init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000114 T __data_section_table
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W RTC_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:100000c4 B _ebss
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W TIMER0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001630 00000088 T Reset_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001984 0000007c T tickInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:20010000 A __top_RamAHB_ETB16
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SPI_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001398 0000003c T Chip_I2C_SetClockRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W LCD_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000db0 0000004c T Chip_Clock_EnableCrystal
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10008000 A __top_RamLoc32
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00018c 0000001e T data_init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000942 00000006 T puertaCorredizaIface_raise_evTECXNoOprimido
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W TIMER1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001370 00000028 T Chip_I2C_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001bfc 00000034 T SetNewTimerTick
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W UART2_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000f6c 00000068 T Chip_Clock_GetMainPLLHz
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0021bc 000000e6 T gpioPinsInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00116c 00000012 T Chip_SSP_SetClockRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO2_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001050 00000028 T Chip_Clock_GetBaseClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000048 B _bss
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00145c 00000032 T Chip_ADC_SetSampleRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W I2S1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00117e 0000003e T Chip_SSP_SetBitRate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000ba4 00000002 T Chip_GPIO_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0020ec 00000004 T OscRateIn
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:100000c4 ? _end_noinit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10008000 A _vStackTop
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SSP1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 T __bss_section_table_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00170c 00000194 T gpioInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001fec 00000002 W __aeabi_ldiv0
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001a2c 0000001c T USB0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO3_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SCT_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000e18 0000001c T Chip_Clock_GetDividerDivisor
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0002fc T __CRP_WORD_START__
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a002038 00000010 T memset
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00017e 00000002 W MemManage_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001b34 000000a4 T main
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W WDT_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001c30 00000036 T UnsetTimerTick
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:2000c000 A __top_RamAHB16
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1008a000 A __top_RamLoc40
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000184 00000002 W SVC_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO7_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001084 0000003c T Chip_Clock_EnableOpts
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000e34 000000b8 T Chip_Clock_GetClockInputHz
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000eec 00000080 T Chip_Clock_CalcMainPLLValue
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0015f4 00000038 T SystemInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W SPIFI_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W QEI_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000150 T __bss_section_table
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0018a0 00000056 T gpioWrite
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0016b8 00000002 W _fini
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00141c 00000040 T Chip_ADC_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000090 00000004 B g_pUsbApi
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000950 00000038 T Board_SetupMuxing
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001b08 0000002a T Buttons_GetStatus_
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001274 000000dc T Chip_UART_SetBaudFDR
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001b32 00000002 T puertaCorredizaIface_opMotor
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000040 00000008 D tickRateMS
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001af4 00000014 T puertaCorrediza_unsetTimer
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W ETH_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000000 ? _end_uninit_RESERVED
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000094 00000030 B ticks
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W CAN0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001bd8 00000024 T InitTimerTicks
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000000 D _data
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00194c 00000020 T tickCallbackSet
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 T __section_table_end
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0011bc 00000038 T Chip_SSP_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GINT0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W DAC_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000b50 00000024 T Board_Debug_Init
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001ac8 00000010 T puertaCorredizaIface_opLED
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:10000048 D _edata
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001350 00000020 T Chip_I2C_EventHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W M0SUB_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00149c 00000158 T Chip_SetupCoreClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO0_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000000 00000040 T g_pfnVectors
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000ba8 00000014 T SystemCoreClockUpdate
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W DMA_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W EVRT_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1b080000 A __top_MFlashB512
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001fec 00000002 W __aeabi_idiv0
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000180 00000002 W BusFault_Handler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0010c0 00000034 T Chip_Clock_Enable
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W UART3_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W MCPWM_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W M0APP_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0018f6 00000054 T gpioRead
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a001a48 00000074 T boardInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000040 000000d4 T g_pfnVendorVectors
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GINT1_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000930 00000012 T puertaCorrediza_raiseTimeEvent
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000858 000000d6 T puertaCorrediza_runCycle
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a00196c 00000018 T tickPowerSet
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000ff8 00000058 T Chip_Clock_SetBaseClock
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0016bc 0000001c T cyclesCounterInit
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a000178 00000002 W GPIO4_IRQHandler
+projects/PuertaCorrediza/out/PuertaCorrediza.elf:1a0009f4 0000000c T Board_SystemInit

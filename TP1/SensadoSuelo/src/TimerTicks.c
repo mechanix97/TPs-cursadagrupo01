@@ -39,9 +39,8 @@
 /** \addtogroup statechart Simple UML Statechart example.
  ** @{ */
 
-#include "../../SensadoSuelo/inc/TimerTicks.h"
-
-#include "Blink.h"
+#include "SensadoSuelo.h"
+#include "TimerTicks.h"
 
 
 void InitTimerTicks(TimerTicks *list, uint32_t len)
