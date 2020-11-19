@@ -68,3 +68,5 @@
 <h2 id="capturas-de-los-diagramas">Diagrama Yakindu:</h2>
 <p><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/PanelDeControl/PanelDeControl.PNG" alt=""></p>
 
+<h1> Version con botones </h1>
+<p> Se utiliza el boton TEC 1 para cambiar la forma de la señal (triangular, cuadrada o senoidal), segun la forma de la señal cambiaria el led RGB de color. Se utilizan los botones TEC 2 / TEC 3 para disminuir/aumentar la magnitud (frecuencia o tension), cada vez que se presiona se enciende la LED3. Se utiliza el boton TEC4 para elegir entre la magnitud a modificar,  ya sea frecuencia o tension, se enciende la LED1 si es tension y la LED2 si es frecuencia </p>
