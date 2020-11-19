@@ -81,3 +81,7 @@
 </ul>
 <h2>Diagrama Yakindu:</h2>
 <p><img src="https://github.com/mechanix97/TPs-cursadagrupo01/blob/master/TP1/PortonLevadizo/PortonLevadizo.PNG" alt=""></p>
+
+<h1> Version con Botones </h1>
+El boton TEC1 activa el funcionamiento abriendo el porton. Al presionarlo se enciende una luz verde (LED RGB) por 500ms notificando que el control anda, y ademas empieza a titilar el LED3 en señal de que el motor esta activo. El boton TEC 2 se utiliza para notificar que el porton ya esta abierto por lo que la luz puede dejar de titilar, se enciende en este momento el LED2 el cual permanecera encendido mientras siga abierto el porton.  Una vez abierto, si se presiona el boton 1 nuevamente, empezara a cerrarse, en este caso en control se vera una luz roja, y el movimiento del porton estará acompañado de la LED3 titilando.  Se utiliza el boton TEC3 para informar que el porton esta cerrado y apagar todas las leds.  Este proceso puede ser interrumpido por la accion del remoto (TEC1) las veces que sea necesario, volviendo a repetirse el encendido de la luz verde(en caso de que el porton se esta abriendo, o la luz roja si el porton se esta cerrando) 
+
