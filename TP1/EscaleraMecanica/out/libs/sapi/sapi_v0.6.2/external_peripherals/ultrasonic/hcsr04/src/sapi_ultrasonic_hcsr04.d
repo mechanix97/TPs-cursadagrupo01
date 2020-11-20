@@ -1,9 +1,8 @@
-TP1/EscaleraMecanica/out/TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.o: \
- TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.c \
- TP1/EscaleraMecanica/gen/EscaleraMecanicaRequired.h \
- TP1/EscaleraMecanica/gen/../inc/sc_types.h \
- TP1/EscaleraMecanica/gen/EscaleraMecanica.h \
- libs/board/edu_ciaa_nxp/inc/board.h libs/board/lpc_chip_43xx/inc/chip.h \
+TP1/EscaleraMecanica/out/libs/sapi/sapi_v0.6.2/external_peripherals/ultrasonic/hcsr04/src/sapi_ultrasonic_hcsr04.o: \
+ libs/sapi/sapi_v0.6.2/external_peripherals/ultrasonic/hcsr04/src/sapi_ultrasonic_hcsr04.c \
+ libs/sapi/sapi_v0.6.2/external_peripherals/ultrasonic/hcsr04/inc/sapi_ultrasonic_hcsr04.h \
+ libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \
+ libs/board/lpc_chip_43xx/inc/chip.h \
  libs/board/lpc_chip_43xx/inc/sys_config.h \
  libs/board/lpc_chip_43xx/inc/cmsis.h \
  libs/board/lpc_chip_43xx/inc/lpc_types.h \
@@ -62,5 +61,11 @@ TP1/EscaleraMecanica/out/TP1/EscaleraMecanica/src/EscaleraMecanicaRequired.o: \
  libs/board/lpc_chip_43xx/inc/iap_18xx_43xx.h \
  libs/board/lpc_chip_43xx/inc/error.h \
  libs/board/lpc_chip_43xx/inc/i2cm_18xx_43xx.h \
+ libs/board/edu_ciaa_nxp/inc/board.h \
  libs/board/edu_ciaa_nxp/inc/board_api.h \
- libs/board/lpc_chip_43xx/inc/lpc_types.h
+ libs/board/lpc_chip_43xx/inc/lpc_types.h \
+ libs/sapi/sapi_v0.6.2/board/inc/sapi_boards.h \
+ libs/sapi/sapi_v0.6.2/base/inc/sapi_register_access.h \
+ libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_timer.h \
+ libs/sapi/sapi_v0.6.2/board/inc/sapi_peripheral_map.h \
+ libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_gpio.h

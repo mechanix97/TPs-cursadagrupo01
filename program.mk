@@ -1,4 +1,4 @@
 
 
 PROGRAM_PATH = TP1
-PROGRAM_NAME = OrdenadorMoto
+PROGRAM_NAME = EscaleraMecanica

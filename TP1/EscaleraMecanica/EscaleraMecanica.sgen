@@ -4,8 +4,8 @@ GeneratorModel for yakindu::c {
 
 		feature Outlet {
 			targetProject = "TPs-cursadagrupo01"
-			targetFolder = "projects/EscaleraMecanica/gen"
-			libraryTargetFolder = "projects/EscaleraMecanica/inc"
+			targetFolder = "TP1/EscaleraMecanica/gen"
+			libraryTargetFolder = "TP1/EscaleraMecanica/inc"
 		}
 	}
 }
