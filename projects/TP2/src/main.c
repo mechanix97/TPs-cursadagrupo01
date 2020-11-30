@@ -1,8 +1,7 @@
-
 #include "main.h"
 #include "Application.h"
 #include "TimerTicks.h"
-
+#include "../inc/gpio.h"
 
 #define TICKRATE_1MS		   (1000)				/* 1000 ticks per second */
 #define TICKRATE_MS			(TICKRATE_1MS)	/* 1000 ticks per second */
@@ -102,7 +101,7 @@ uint32_t Buttons_GetStatus_(void) {
 	uint8_t idx;
 
 	for (idx = 0; idx < 4; ++idx) {
-		if (gpioRead( BOARD_TEC_1 + idx ) == 0)
+		if (gpioRead( TEC1 + idx ) == 0)
 			ret |= 1 << idx;
 	}
 	return ret;
@@ -111,7 +110,13 @@ uint32_t Buttons_GetStatus_(void) {
 
 /* COMPLETAR CON LA INICIALIZACIÓN DE LOS LEDs Y LAS TECLAS */
 void Init_LEDs_and_TECs(void){
-	// Completar
+	gpioInit(LED1,GPIO_O);
+	gpioInit(LED2,GPIO_O);
+	gpioInit(LED3,GPIO_O);
+	gpioInit(TEC1,GPIO_I_PULLUP);
+	gpioInit(TEC2,GPIO_I_PULLUP);
+	gpioInit(TEC3,GPIO_I_PULLUP);
+	gpioInit(TEC4,GPIO_I_PULLUP);
 }
 
 
@@ -174,14 +179,16 @@ int main(void)
 			BUTTON_Status = Buttons_GetStatus_();
 
 			/* Then if there are a pressed button */
-			if (BUTTON_Status != 0)
-
+			if (BUTTON_Status != 0){
 				/* Then Raise an Event -> evTECXOprimodo => OK,
 				 * and Value of pressed button -> viTecla */
 				applicationIface_raise_evTECXOprimido(&statechart, BUTTON_Status);
-			else
+				gpioWrite(LED2, true);
+			} else {
 				/* Then else Raise an Event -> evTECXNoOprimido => OK */
 				applicationIface_raise_evTECXNoOprimido(&statechart);
+				gpioWrite(LED1, true);
+			}
 
 			/* Then Run an Cycle of Statechart */
 			application_runCycle(&statechart);		// Run Cycle of Statechart

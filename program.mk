@@ -1,4 +1,4 @@
 
 
-PROGRAM_PATH = TP1
-PROGRAM_NAME = EscaleraMecanica
+PROGRAM_PATH = projects
+PROGRAM_NAME = TP2
