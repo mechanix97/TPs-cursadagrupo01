@@ -28,11 +28,15 @@ typedef intptr_t		sc_intptr_t;
 }
 #endif
 
-#ifndef null
+#ifndef sc_null
 	#ifdef __cplusplus
-		#define null 0
+		#if __cplusplus >= 201103L || (defined(_MSC_VER) && _MSC_VER >= 1900)
+	  		#define sc_null nullptr
+		#else
+			#define sc_null 0
+		#endif
 	#else
-		#define null ((void *)0)
+		#define sc_null ((void *)0)
 	#endif
 #endif
 

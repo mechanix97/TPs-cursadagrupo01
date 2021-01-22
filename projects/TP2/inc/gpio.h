@@ -1,10 +1,13 @@
 #ifndef _GPIO_H_
 #define _GPIO_H_
 
-#include "board.h"
+#include <board.h>
 
 
-typedef bool bool_t;
+
+#define SCU_BASE_ADDR
+
+#define GPIO_BASE_ADDR 0x40086000
 
 typedef enum{
    GPIO_I,
@@ -16,11 +19,11 @@ typedef enum{
 
 
 typedef struct {
-	bool_t scuPort;
-	bool_t scuPin;
-	bool_t gpioPort;
-	bool_t gpioPin;
-	bool_t func;
+	uint8_t scuPort;
+	uint8_t scuPin;
+	uint8_t gpioPort;
+	uint8_t gpioPin;
+	uint8_t func;
 } gpioPinConfig_t;
 
 
@@ -41,6 +44,6 @@ void gpioInit( gpioMap_t pin, gpioInit_t conf );
 
 void gpioWrite( gpioMap_t pin, bool_t value );
 
-bool_t gpioRead( gpioMap_t pin);
+uint8_t gpioRead( gpioMap_t pin);
 
 #endif

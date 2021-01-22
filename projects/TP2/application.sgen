@@ -3,9 +3,9 @@ GeneratorModel for yakindu::c {
 	statechart application {
 
 		feature Outlet {
-			targetProject = "basic-firmware-educiaa"
-			targetFolder = "projects/application/gen"
-			libraryTargetFolder = "projects/application/inc"
+			targetProject = "TPs-cursadagrupo01"
+			targetFolder = "projects/TP2/gen"
+			libraryTargetFolder = "projects/TP2/inc"
 		}
 	}
 }
