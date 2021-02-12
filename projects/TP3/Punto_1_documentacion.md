@@ -3,7 +3,7 @@
 <h2> uartConfig( UART_USB, 115200 ) </h2>
 <ul>
   <li> Se encuentra dentro de sapi_uart.c </li>
-  <li> Recibe por parametros la configuración inicial para inicializar un UART </li>
+  <li> Recibe por parametros la configuración inicial para inicializar la UART de un puerto serie </li>
   <li> En este caso inicializará UART_USB con un baud rate de 115200 </li>
   <li> Algunas de las funciones utilizadas son : Chip_UART_Init, Chip_UART_SetBaud, Chip_UART_SetupFIFOS, Chip_UART_ReadByte, Chip_UART_TXEnable , Chip_SCU_PinMux </li>
 </ul>
@@ -56,7 +56,7 @@
 <h2> uartWriteByte( UART_USB, dato ) </h2>
 <ul>
   <li> Se encuentra dentro de sapi_uart.c </li>
-  <li> Recibe por parametro un byte del TX del UART y un puntero al dato</li>
+  <li> Recibe por parametro un byte del TX del UART y un byte como dato</li>
   <li> En este caso escribe el valor pasado como segundo argumento (dato) en el TX de UART_USB</li>
   <li> Algunas de las funciones utilizadas son :uartTxReady, uartTxWrite
  </li>

@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+#include "../inc/stack.h"
+
 #define MAX_BUFFER 500
 
 int check_number(char * s){
