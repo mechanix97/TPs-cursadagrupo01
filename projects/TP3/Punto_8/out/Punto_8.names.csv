@@ -1,0 +1,223 @@
+projects/TP3/Punto_8/out/Punto_8.elf:1a001364 000000a4 t uartProcessIRQ
+projects/TP3/Punto_8/out/Punto_8.elf:100000f8 00000004 b rxIsrCallbackUART0
+projects/TP3/Punto_8/out/Punto_8.elf:100000fc 00000004 b rxIsrCallbackUART2
+projects/TP3/Punto_8/out/Punto_8.elf:10000100 00000004 b rxIsrCallbackUART3
+projects/TP3/Punto_8/out/Punto_8.elf:10000104 00000004 b txIsrCallbackUART0
+projects/TP3/Punto_8/out/Punto_8.elf:10000108 00000004 b txIsrCallbackUART2
+projects/TP3/Punto_8/out/Punto_8.elf:1000010c 00000004 b txIsrCallbackUART3
+projects/TP3/Punto_8/out/Punto_8.elf:1a0020d4 00000048 t lpcUarts
+projects/TP3/Punto_8/out/Punto_8.elf:100000d0 00000008 b button1
+projects/TP3/Punto_8/out/Punto_8.elf:100000d8 00000008 b button2
+projects/TP3/Punto_8/out/Punto_8.elf:100000e0 00000008 b button3
+projects/TP3/Punto_8/out/Punto_8.elf:100000e8 00000008 b button4
+projects/TP3/Punto_8/out/Punto_8.elf:1a000624 00000044 t Board_LED_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a000668 00000040 t Board_TEC_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a0006a8 00000040 t Board_GPIO_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a0006e8 00000030 t Board_ADC_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a000718 00000038 t Board_SPI_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a000750 00000024 t Board_I2C_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f60 00000008 t GpioButtons
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f68 0000000c t GpioLeds
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f74 00000012 t GpioPorts
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f8c 00000004 t InitClkStates
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f90 00000074 t pinmuxing
+projects/TP3/Punto_8/out/Punto_8.elf:1a000880 0000002c t Chip_UART_GetIndex
+projects/TP3/Punto_8/out/Punto_8.elf:1a002004 00000008 t UART_BClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a00200c 00000008 t UART_PClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a000a1c 00000014 t Chip_ADC_GetClockIndex
+projects/TP3/Punto_8/out/Punto_8.elf:1a000a30 00000032 t getClkDiv
+projects/TP3/Punto_8/out/Punto_8.elf:1a000af8 000000a0 t pll_calc_divs
+projects/TP3/Punto_8/out/Punto_8.elf:1a000b98 0000010c t pll_get_frac
+projects/TP3/Punto_8/out/Punto_8.elf:1a000ca4 0000004c t Chip_Clock_FindBaseClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a000f18 00000022 t Chip_Clock_GetDivRate
+projects/TP3/Punto_8/out/Punto_8.elf:100000f0 00000008 b audio_usb_pll_freq
+projects/TP3/Punto_8/out/Punto_8.elf:1a002020 0000006c t periph_to_base
+projects/TP3/Punto_8/out/Punto_8.elf:1a00208c 00000048 t InitClkStates
+projects/TP3/Punto_8/out/Punto_8.elf:1a0011e0 00000014 t Chip_SSP_GetClockIndex
+projects/TP3/Punto_8/out/Punto_8.elf:1a0011f4 00000018 t Chip_SSP_GetPeriphClockIndex
+projects/TP3/Punto_8/out/Punto_8.elf:10000000 00000038 d i2c
+projects/TP3/Punto_8/out/Punto_8.elf:10000038 00000004 d ClockSpeed
+projects/TP3/Punto_8/out/Punto_8.elf:10000110 00000004 b callBackFuncParams
+projects/TP3/Punto_8/out/Punto_8.elf:10000118 00000008 b tickCounter
+projects/TP3/Punto_8/out/Punto_8.elf:10000120 00000004 b tickHookFunction
+projects/TP3/Punto_8/out/Punto_8.elf:1a001704 00000002 t errorOcurred
+projects/TP3/Punto_8/out/Punto_8.elf:1a001706 00000002 t doNothing
+projects/TP3/Punto_8/out/Punto_8.elf:10000048 00000040 d timer_dd
+projects/TP3/Punto_8/out/Punto_8.elf:1a001810 00000034 t gpioObtainPinInit
+projects/TP3/Punto_8/out/Punto_8.elf:10000124 00000004 b g_hUsb
+projects/TP3/Punto_8/out/Punto_8.elf:1a001b54 00000010 t clearInterrupt
+projects/TP3/Punto_8/out/Punto_8.elf:1a001b64 0000005c t serveInterrupt
+projects/TP3/Punto_8/out/Punto_8.elf:10000088 00000048 d ultrasonicSensors
+projects/TP3/Punto_8/out/Punto_8.elf:1a002204 00000003 t ultrasonicSensorsIrqMap
+projects/TP3/Punto_8/out/Punto_8.elf:1a00220c t __init_array_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a002208 b __preinit_array_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a002208 t __init_array_start
+projects/TP3/Punto_8/out/Punto_8.elf:1a002208 b __preinit_array_start
+projects/TP3/Punto_8/out/Punto_8.elf:1a000d3c 0000001c T Chip_Clock_GetDividerSource
+projects/TP3/Punto_8/out/Punto_8.elf:1a001788 00000044 T TIMER2_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001554 00000014 T uartRxRead
+projects/TP3/Punto_8/out/Punto_8.elf:1a000184 00000002 W DebugMon_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W RIT_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a080000 A __top_MFlashA512
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W ADCHS_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000114 T __section_table_start
+projects/TP3/Punto_8/out/Punto_8.elf:1a00042a 0000003c T buttonRaised
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W FLASH_EEPROM_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W I2C0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0015f8 0000001e T uartReadByte
+projects/TP3/Punto_8/out/Punto_8.elf:1a0007c8 00000008 T __stdio_init
+projects/TP3/Punto_8/out/Punto_8.elf:1a00017a 00000002 W HardFault_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000000 A __vectors_start__
+projects/TP3/Punto_8/out/Punto_8.elf:1a000ad6 0000000c T Chip_ADC_SetResolution
+projects/TP3/Punto_8/out/Punto_8.elf:1a0016d8 0000002c T SysTick_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000900 00000040 T Chip_UART_SetBaud
+projects/TP3/Punto_8/out/Punto_8.elf:1a000594 00000002 W initialise_monitor_handles
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SDIO_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W ATIMER_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000186 00000002 W PendSV_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000178 00000002 W NMI_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a002214 R __exidx_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a000150 T __data_section_table_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W I2C1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W UART1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GPIO5_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000300 00000096 T processInput
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W CAN1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:53ff72f6 A __valid_user_code_checksum
+projects/TP3/Punto_8/out/Punto_8.elf:1a002214 R _etext
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W USB1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W I2S0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0017cc 00000044 T TIMER3_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000fba 0000000c T Chip_Clock_GetBaseClocktHz
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001bc 0000000a T UART0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001a8 00000012 T bss_init
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SGPIO_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001be0 T __aeabi_uldivmod
+projects/TP3/Punto_8/out/Punto_8.elf:10000130 ? _noinit
+projects/TP3/Punto_8/out/Punto_8.elf:10000128 00000004 B SystemCoreClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a000396 0000002c T onRx
+projects/TP3/Punto_8/out/Punto_8.elf:1a0008ac 00000054 T Chip_UART_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W ADC0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000180 00000002 W UsageFault_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001038 0000004c T Chip_Clock_GetRate
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GPIO6_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000808 0000006c T Board_SetupClocking
+projects/TP3/Punto_8/out/Punto_8.elf:20008000 A __top_RamAHB32
+projects/TP3/Punto_8/out/Punto_8.elf:1a001c10 000002d0 T __udivmoddi4
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f5c 00000004 T ExtRateIn
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W IntDefaultHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000300 T __CRP_WORD_END__
+projects/TP3/Punto_8/out/Punto_8.elf:1a001bca 0000000a T GPIO1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SSP0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001524 00000018 T uartRxReady
+projects/TP3/Punto_8/out/Punto_8.elf:1a00220c R __exidx_start
+projects/TP3/Punto_8/out/Punto_8.elf:1a0002fc 00000004 T CRP_WORD
+projects/TP3/Punto_8/out/Punto_8.elf:1a001ee4 00000048 T __libc_init_array
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W ADC1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000798 00000030 T Board_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a000466 0000000a T InitButton
+projects/TP3/Punto_8/out/Punto_8.elf:1a000622 00000002 W _init
+projects/TP3/Punto_8/out/Punto_8.elf:1a000114 T __data_section_table
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W RTC_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:10000130 B _ebss
+projects/TP3/Punto_8/out/Punto_8.elf:1a001708 00000040 T TIMER0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000598 00000088 T Reset_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a00165c 0000007c T tickInit
+projects/TP3/Punto_8/out/Punto_8.elf:20010000 A __top_RamAHB_ETB16
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SPI_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0012d8 00000038 T Chip_I2C_SetClockRate
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W LCD_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000cf0 0000004c T Chip_Clock_EnableCrystal
+projects/TP3/Punto_8/out/Punto_8.elf:10008000 A __top_RamLoc32
+projects/TP3/Punto_8/out/Punto_8.elf:1a00018a 0000001e T data_init
+projects/TP3/Punto_8/out/Punto_8.elf:1a001748 00000040 T TIMER1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0012b4 00000024 T Chip_I2C_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a001630 0000000a T UART2_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000eac 0000006c T Chip_Clock_GetMainPLLHz
+projects/TP3/Punto_8/out/Punto_8.elf:1a00211c 000000e6 T gpioPinsInit
+projects/TP3/Punto_8/out/Punto_8.elf:1a001408 00000090 T uartInterrupt
+projects/TP3/Punto_8/out/Punto_8.elf:1a001616 0000001a T uartWriteByte
+projects/TP3/Punto_8/out/Punto_8.elf:1a00120c 00000012 T Chip_SSP_SetClockRate
+projects/TP3/Punto_8/out/Punto_8.elf:1a001bd4 0000000a T GPIO2_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000f94 00000026 T Chip_Clock_GetBaseClock
+projects/TP3/Punto_8/out/Punto_8.elf:100000d0 B _bss
+projects/TP3/Punto_8/out/Punto_8.elf:1a000aa4 00000032 T Chip_ADC_SetSampleRate
+projects/TP3/Punto_8/out/Punto_8.elf:1a000470 0000006e T buttonUpdate
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W I2S1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a00121e 0000003e T Chip_SSP_SetBitRate
+projects/TP3/Punto_8/out/Punto_8.elf:1a0011dc 00000002 T Chip_GPIO_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f88 00000004 T OscRateIn
+projects/TP3/Punto_8/out/Punto_8.elf:1a00157c 0000007c T uartInit
+projects/TP3/Punto_8/out/Punto_8.elf:10000130 ? _end_noinit
+projects/TP3/Punto_8/out/Punto_8.elf:10008000 A _vStackTop
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SSP1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000178 T __bss_section_table_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a001844 000001ac T gpioInit
+projects/TP3/Punto_8/out/Punto_8.elf:1a001ee0 00000002 W __aeabi_ldiv0
+projects/TP3/Punto_8/out/Punto_8.elf:1a001ac4 0000001c T USB0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GPIO3_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SCT_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000d58 0000001c T Chip_Clock_GetDividerDivisor
+projects/TP3/Punto_8/out/Punto_8.elf:1a0002fc T __CRP_WORD_START__
+projects/TP3/Punto_8/out/Punto_8.elf:1a001f2c 00000010 T memset
+projects/TP3/Punto_8/out/Punto_8.elf:1a00017c 00000002 W MemManage_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0004e0 000000b4 T main
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W WDT_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:2000c000 A __top_RamAHB16
+projects/TP3/Punto_8/out/Punto_8.elf:1008a000 A __top_RamLoc40
+projects/TP3/Punto_8/out/Punto_8.elf:1a000182 00000002 W SVC_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a00153c 00000018 T uartTxReady
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GPIO7_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000fc8 0000003c T Chip_Clock_EnableOpts
+projects/TP3/Punto_8/out/Punto_8.elf:1a0003ee 0000003c T buttonFalled
+projects/TP3/Punto_8/out/Punto_8.elf:1a000d74 000000b8 T Chip_Clock_GetClockInputHz
+projects/TP3/Punto_8/out/Punto_8.elf:1a000e2c 00000080 T Chip_Clock_CalcMainPLLValue
+projects/TP3/Punto_8/out/Punto_8.elf:1a0003c2 0000002c T onRx232
+projects/TP3/Punto_8/out/Punto_8.elf:1a001310 00000038 T SystemInit
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W SPIFI_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W QEI_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000150 T __bss_section_table
+projects/TP3/Punto_8/out/Punto_8.elf:1a0019f0 0000006a T gpioWrite
+projects/TP3/Punto_8/out/Punto_8.elf:1a000620 00000002 W _fini
+projects/TP3/Punto_8/out/Punto_8.elf:1a000a64 00000040 T Chip_ADC_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1000012c 00000004 B g_pUsbApi
+projects/TP3/Punto_8/out/Punto_8.elf:1a0007d0 00000038 T Board_SetupMuxing
+projects/TP3/Punto_8/out/Punto_8.elf:1a000940 000000dc T Chip_UART_SetBaudFDR
+projects/TP3/Punto_8/out/Punto_8.elf:10000040 00000008 D tickRateMS
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W ETH_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:10000000 ? _end_uninit_RESERVED
+projects/TP3/Punto_8/out/Punto_8.elf:1a001568 00000014 T uartTxWrite
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W CAN0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:10000000 D _data
+projects/TP3/Punto_8/out/Punto_8.elf:10000130 B _pvHeapStart
+projects/TP3/Punto_8/out/Punto_8.elf:1a000178 T __section_table_end
+projects/TP3/Punto_8/out/Punto_8.elf:1a00125c 00000038 T Chip_SSP_Init
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GINT0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W DAC_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000774 00000024 T Board_Debug_Init
+projects/TP3/Punto_8/out/Punto_8.elf:100000d0 D _edata
+projects/TP3/Punto_8/out/Punto_8.elf:1a001294 00000020 T Chip_I2C_EventHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W M0SUB_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001084 00000158 T Chip_SetupCoreClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a001bc0 0000000a T GPIO0_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000000 00000040 T g_pfnVectors
+projects/TP3/Punto_8/out/Punto_8.elf:1a000ae4 00000014 T SystemCoreClockUpdate
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W DMA_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W EVRT_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1b080000 A __top_MFlashB512
+projects/TP3/Punto_8/out/Punto_8.elf:1a001ee0 00000002 W __aeabi_idiv0
+projects/TP3/Punto_8/out/Punto_8.elf:1a001498 0000008c T uartCallbackSet
+projects/TP3/Punto_8/out/Punto_8.elf:1a00017e 00000002 W BusFault_Handler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001004 00000034 T Chip_Clock_Enable
+projects/TP3/Punto_8/out/Punto_8.elf:1a00163a 0000000a T UART3_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W MCPWM_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W M0APP_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001a5a 00000068 T gpioRead
+projects/TP3/Punto_8/out/Punto_8.elf:1a001ae0 00000074 T boardInit
+projects/TP3/Punto_8/out/Punto_8.elf:1a000040 000000d4 T g_pfnVendorVectors
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GINT1_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a001644 00000018 T tickPowerSet
+projects/TP3/Punto_8/out/Punto_8.elf:1a000f3c 00000058 T Chip_Clock_SetBaseClock
+projects/TP3/Punto_8/out/Punto_8.elf:1a001348 0000001c T cyclesCounterInit
+projects/TP3/Punto_8/out/Punto_8.elf:1a0001ba 00000002 W GPIO4_IRQHandler
+projects/TP3/Punto_8/out/Punto_8.elf:1a000874 0000000c T Board_SystemInit
