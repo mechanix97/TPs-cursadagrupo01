@@ -1,4 +1,5 @@
-#include "main.h"
+#include "../../Punto_7a/inc/main.h"
+
 #include "sapi.h"
 
 
@@ -14,19 +15,19 @@ void buttonFalled(myButton_t* b){
 	switch(b->button){
 		case TEC1:
 			gpioWrite(LEDG,HIGH);
-			uartWriteByte( UART_USB, 'G');
+			uartWriteByte( UART_232, 'G');
 			break;
 		case TEC2:
 			gpioWrite(LED1,HIGH);
-			uartWriteByte( UART_USB, '1');
+			uartWriteByte( UART_232, '1');
 			break;
 		case TEC3:
 			gpioWrite(LED2,HIGH);
-			uartWriteByte( UART_USB, '2');
+			uartWriteByte( UART_232, '2');
 			break;
 		case TEC4:
 			gpioWrite(LED3,HIGH);
-			uartWriteByte( UART_USB, '3');
+			uartWriteByte( UART_232, '3');
 			break;
 	}
 }
@@ -37,19 +38,19 @@ void  buttonRaised(myButton_t* b){
 	switch(b->button){
 		case TEC1:
 			gpioWrite(LEDG,LOW);
-			uartWriteByte( UART_USB, 'G');
+			uartWriteByte( UART_232, 'G');
 			break;
 		case TEC2:
 			gpioWrite(LED1,LOW);
-			uartWriteByte( UART_USB, '1');
+			uartWriteByte( UART_232, '1');
 			break;
 		case TEC3:
 			gpioWrite(LED2,LOW);
-			uartWriteByte( UART_USB, '2');
+			uartWriteByte( UART_232, '2');
 			break;
 		case TEC4:
 			gpioWrite(LED3,LOW);
-			uartWriteByte( UART_USB, '3');
+			uartWriteByte( UART_232, '3');
 			break;
 		}
 }
@@ -94,7 +95,7 @@ void buttonUpdate(myButton_t* b){
 int main(void)
 {
 	boardConfig();
-	uartConfig(UART_USB, 115200);
+	uartConfig(UART_232, 115200);
 	tickConfig(50);
 
 
