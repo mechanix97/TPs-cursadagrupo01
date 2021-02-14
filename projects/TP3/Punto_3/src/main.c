@@ -1,9 +1,9 @@
 #include "main.h"
 
-static button_t button1;
-static button_t button2;
-static button_t button3;
-static button_t button4;
+static myButton_t button1;
+static myButton_t button2;
+static myButton_t button3;
+static myButton_t button4;
 static char led_char;
 
 void onTickUpdate(){
@@ -83,52 +83,54 @@ int main(void)
 
 
 
-void InitButton(button_t* b, gpioMap_t button_number){
-	b->button_state = BUTTON_OFF;
+void InitButton(myButton_t* b, gpioMap_t button_number, char* name){
+	b->button_state = BUTTON_STATE_OFF;
 	b->button = button_number;
+	b->name = name;
+}
+
+void buttonFalled(myButton_t* b){
+	uartWriteString( UART_USB, "Boton  " );
+	uartWriteString( UART_USB, b->name );
+	uartWriteString( UART_USB, "\r\n" );
+}
+
+void  buttonRaised(myButton_t* b){
+	uartWriteString( UART_USB, "Boton  " );
+	uartWriteString( UART_USB, b->name );
+	uartWriteString( UART_USB, "\r\n" );
 }
 
 
-void buttonUpdate(button_t* b){
+void buttonUpdate(myButton_t* b){
 	switch(b->button_state){
-		case BUTTON_OFF:
+		case BUTTON_STATE_OFF:
 			if(gpioRead(b->button) == LOW)
-				b->button_state = BUTTON_RISING;
+				b->button_state = BUTTON_STATE_RISING;
 			break;
 			
-		case BUTTON_ON:
+		case BUTTON_STATE_ON:
 			if(gpioRead(b->button) == HIGH)
-				b->button_state = BUTTON_FALLING;
+				b->button_state = BUTTON_STATE_FALLING;
 			break;
 			
-		case BUTTON_RISING:
+		case BUTTON_STATE_RISING:
 			if(gpioRead(b->button) == LOW){
-				b->button_state = BUTTON_ON;
-				ButtonRaised(b);
+				b->button_state = BUTTON_STATE_ON;
+				buttonRaised(b);
 			} else
-				b->button_state = BUTTON_OFF;
+				b->button_state = BUTTON_STATE_OFF;
 			break;
 			
-		case BUTTON_FALLING:
+		case BUTTON_STATE_FALLING:
 			if(gpioRead(b->button) == HIGH){
-				b->button_state = BUTTON_OFF;
-				ButtonFalled(b);
+				b->button_state = BUTTON_STATE_OFF;
+				buttonFalled(b);
 			} else
-				b->button_state = BUTTON_ON;
+				b->button_state = BUTTON_STATE_ON;
 			break;
 	}
 }
 
 
 
-void buttonFalled(button_t* b){
-	uartWriteString( UART_USB, "Boton  " );
-	uartWriteString( UART_USB, b->button );
-	uartWriteString( UART_USB, "\r\n" );
-}
-
-void  buttonRaised(button_t* b){
-	uartWriteString( UART_USB, "Boton  " );
-	uartWriteString( UART_USB, b->button );
-	uartWriteString( UART_USB, "\r\n" );
-}

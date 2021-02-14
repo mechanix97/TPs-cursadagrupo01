@@ -4,6 +4,13 @@
 
 #include "sapi.h"
 
+#define BUTTON1 myTEC1
+
+#define BUTTON2 myTEC2
+
+#define BUTTON3 myTEC3
+
+#define BUTTON4 myTEC4
 
 typedef enum{
    BUTTON_STATE_ON,
@@ -15,14 +22,15 @@ typedef enum{
 typedef struct {
 	gpioMap_t button;
 	buttonState_t button_state;
-}button_t;
+	char* name;
+}myButton_t;
 
-void initButton(button_t* t, gpioMap_t ID);
+void initButton(myButton_t* t, gpioMap_t ID);
 
 
-void buttonUpdate(button_t* t);
+void buttonUpdate(myButton_t* t);
 
-void buttonRaised(button_t* t);
+void buttonRaised(myButton_t* t);
 
-void buttonFalled(button_t* t);
+void buttonFalled(myButton_t* t);
 #endif
