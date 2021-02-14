@@ -1,4 +1,4 @@
 
 
-PROGRAM_PATH = projects
-PROGRAM_NAME = TP2
+PROGRAM_PATH = projects/TP3
+PROGRAM_NAME = Punto_2

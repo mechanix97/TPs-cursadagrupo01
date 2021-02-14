@@ -1,6 +1,6 @@
-#include "sapi.h"
+#include <sapi.h>
 
-static char led_char;
+
 
 
 void printReference() {
@@ -12,8 +12,8 @@ void printReference() {
 	printf("- brillo Led3: Z\r\n");
 }
 
-void uartRead(void* unused){
-	led_char = uartRxRead(UART_USB);
+void readUart(void* unused){
+	uint8_t led_char = uartRxRead(UART_USB);
 	printf("Se ingreso: %c", led_char);
 	switch(led_char){
 		case 'A':
@@ -34,6 +34,9 @@ void uartRead(void* unused){
 		case 'Z':
 			rgbWriteRaw(RGB_1, rgbReadDutyRed(RGB_1), rgbReadDutyGreen(RGB_1), rgbReadDutyBlue(RGB_1)-1);
 			break;
+		case 'M':
+			rgbWriteRaw(RGB_1, 12 , rgbReadDutyGreen(RGB_1), rgbReadDutyBlue(RGB_1)-1);
+			break;
 	}
 }
 
@@ -43,12 +46,11 @@ int main(void)
 
 	boardConfig();
 	uartConfig(UART_USB, 115200);
-	tickConfig(50);
 
 	rgbConfig (RGB_1, LEDR, LEDG, LEDB);
 
-	uartCallbackSet(UART_USB, UART_RECEIVE, uartRead, NULL);
-	
+	uartCallbackSet(UART_USB, UART_RECEIVE, readUart, NULL);
+
 	uartInterrupt(UART_USB, true);
 
 	printReference();
